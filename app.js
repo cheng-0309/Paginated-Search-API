@@ -46,12 +46,17 @@ app.get('/search', (req, res) => {
     ? allArticles
     : (allArticles && Array.isArray(allArticles.articles) ? allArticles.articles : []);
 
-  // Filter articles case-insensitively by title
+  // Filter articles case-insensitively by title or author
   const searchTerm = name.trim().toLowerCase();
+  // Also build a compact version (no spaces/hyphens) to match abbreviations like "webdev" → "web development"
+  const searchCompact = searchTerm.replace(/[\s\-_]+/g, '');
   const filteredArticles = dataset.filter((article) => {
     if (!article || !article.title) return false;
     const title = String(article.title).toLowerCase();
-    return title.includes(searchTerm) || (searchTerm === 'webdev' && title.includes('web development'));
+    const author = article.author ? String(article.author).toLowerCase() : '';
+    const titleCompact = title.replace(/[\s\-_]+/g, '');
+    // Match if title or author contains the search term, or compact title contains compact search
+    return title.includes(searchTerm) || author.includes(searchTerm) || titleCompact.includes(searchCompact);
   });
 
   const totalResults = filteredArticles.length;
