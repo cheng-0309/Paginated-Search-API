@@ -1,0 +1,37 @@
+[
+  {
+    "id": 101,
+    "title": "Introduction to Programming Concepts",
+    "author": "Coder One"
+  },
+  {
+    "id": 102,
+    "title": "Advanced Programming Techniques",
+    "author": "Dev Expert"
+  },
+  {
+    "id": 201,
+    "title": "Data Structures Basics",
+    "author": "Data Whiz"
+  },
+  {
+    "id": 202,
+    "title": "Big Data Analytics Explained",
+    "author": "Analytics Pro"
+  },
+  {
+    "id": 301,
+    "title": "Responsive Web Development",
+    "author": "Web Guru"
+  },
+  {
+    "id": 401,
+    "title": "Understanding Promises",
+    "author": "Async Master"
+  },
+  {
+    "id": 402,
+    "title": "Node.js Microservices Architecture",
+    "author": "Cloud Architect"
+  }
+]

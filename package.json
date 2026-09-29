@@ -1,0 +1,25 @@
+{
+  "name": "paginated-search-api",
+  "version": "1.0.0",
+  "description": "Paginated Search API endpoint in Express.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --runInBand --detectOpenHandles"
+  },
+  "keywords": [
+    "express",
+    "pagination",
+    "search",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
